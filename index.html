@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Dashboard Redirect</title>
+  <title>NSW Air Quality Forecasting Dashboard</title>
   <style>
     :root {
       color-scheme: light;
@@ -65,9 +65,9 @@
 </head>
 <body>
   <main>
-    <h1>Opening AI Dashboard</h1>
-    <p id="message">Finding the current dashboard link...</p>
-    <p><a id="open-link" class="button" href="#" aria-disabled="true">Open dashboard</a></p>
+    <h1>NSW Air Quality Forecasting Dashboard</h1>
+    <p id="message">Finding the current live dashboard...</p>
+    <p><a id="open-link" class="button" href="#" aria-disabled="true">Open NSW Air Quality Forecasting Dashboard</a></p>
     <div id="status" class="status">Waiting for link data.</div>
   </main>
 
@@ -90,8 +90,8 @@
 
         link.href = data.url;
         link.removeAttribute("aria-disabled");
-        link.textContent = data.url;
-        message.textContent = "Redirecting to the current dashboard link...";
+        link.textContent = "Open NSW Air Quality Forecasting Dashboard";
+        message.textContent = "Redirecting to NSW Air Quality Forecasting Dashboard...";
         status.textContent = `Last updated: ${data.updated_at || "unknown"}`;
 
         window.setTimeout(() => {
