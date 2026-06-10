@@ -72,22 +72,56 @@
   </main>
 
   <script>
+    const linkSources = [
+      "current.json",
+      "https://raw.githubusercontent.com/ai4betterAir/ai4betterAir.github.io/main/current.json"
+    ];
+
+    function isValidDashboardUrl(url) {
+      return /^https:\/\/[a-z0-9.-]+\.lhr\.life\/?$/.test(url || "");
+    }
+
+    function updatedTime(data) {
+      const time = Date.parse(data.updated_at || "");
+      return Number.isFinite(time) ? time : 0;
+    }
+
+    async function fetchLinkSource(source) {
+      const separator = source.includes("?") ? "&" : "?";
+      const response = await fetch(`${source}${separator}ts=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`${source} returned ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (!isValidDashboardUrl(data.url)) {
+        throw new Error(`${source} has no valid dashboard URL`);
+      }
+
+      return data;
+    }
+
     async function loadCurrentLink() {
       const status = document.getElementById("status");
       const message = document.getElementById("message");
       const link = document.getElementById("open-link");
 
       try {
-        const response = await fetch(`current.json?ts=${Date.now()}`, { cache: "no-store" });
-        if (!response.ok) {
-          throw new Error(`current.json returned ${response.status}`);
+        const results = await Promise.allSettled(linkSources.map(fetchLinkSource));
+        const links = results
+          .filter((result) => result.status === "fulfilled")
+          .map((result) => result.value)
+          .sort((left, right) => updatedTime(right) - updatedTime(left));
+
+        if (!links.length) {
+          const errors = results
+            .filter((result) => result.status === "rejected")
+            .map((result) => result.reason.message)
+            .join("; ");
+          throw new Error(errors || "No valid dashboard URL is published yet.");
         }
 
-        const data = await response.json();
-        if (!data.url || !/^https:\/\/[a-z0-9.-]+\.lhr\.life\/?$/.test(data.url)) {
-          throw new Error("No valid dashboard URL is published yet.");
-        }
-
+        const data = links[0];
         link.href = data.url;
         link.removeAttribute("aria-disabled");
         link.textContent = "Open NSW Air Quality Forecasting Dashboard";
