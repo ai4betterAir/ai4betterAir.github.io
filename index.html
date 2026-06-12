@@ -61,14 +61,38 @@
       font-size: 14px;
       overflow-wrap: anywhere;
     }
+
+    .current-url {
+      margin: 0 0 18px;
+      padding: 12px;
+      border: 1px solid #c9d6e2;
+      border-radius: 6px;
+      background: #f8fafc;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .current-url a {
+      color: #005eb8;
+      font-weight: 700;
+    }
+
+    .links {
+      margin: 16px 0 0;
+      padding-left: 20px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
   </style>
 </head>
 <body>
   <main>
     <h1>NSW Air Quality Forecasting Dashboard</h1>
     <p id="message">Finding the current live dashboard...</p>
+    <div id="current-url" class="current-url" hidden></div>
     <p><a id="open-link" class="button" href="#" aria-disabled="true">Open NSW Air Quality Forecasting Dashboard</a></p>
     <div id="status" class="status">Waiting for link data.</div>
+    <ul id="fallback-links" class="links" hidden></ul>
   </main>
 
   <script>
@@ -78,12 +102,46 @@
     ];
 
     function isValidDashboardUrl(url) {
-      return /^https:\/\/[a-z0-9.-]+\.lhr\.life\/?$/.test(url || "");
+      try {
+        const parsed = new URL(url);
+        return parsed.protocol === "https:" && parsed.hostname.endsWith(".lhr.life");
+      } catch (error) {
+        return false;
+      }
     }
 
     function updatedTime(data) {
       const time = Date.parse(data.updated_at || "");
       return Number.isFinite(time) ? time : 0;
+    }
+
+    function candidatesFromData(data) {
+      const candidates = [];
+
+      if (!data || typeof data !== "object") {
+        return candidates;
+      }
+
+      if (isValidDashboardUrl(data.url)) {
+        candidates.push({
+          url: data.url,
+          updated_at: data.updated_at || ""
+        });
+      }
+
+      if (Array.isArray(data.urls)) {
+        for (const item of data.urls) {
+          const candidate = typeof item === "string" ? { url: item, updated_at: data.updated_at || "" } : item;
+          if (candidate && isValidDashboardUrl(candidate.url)) {
+            candidates.push({
+              url: candidate.url,
+              updated_at: candidate.updated_at || data.updated_at || ""
+            });
+          }
+        }
+      }
+
+      return candidates;
     }
 
     async function fetchLinkSource(source) {
@@ -94,23 +152,48 @@
       }
 
       const data = await response.json();
-      if (!isValidDashboardUrl(data.url)) {
+      const candidates = candidatesFromData(data);
+      if (!candidates.length) {
         throw new Error(`${source} has no valid dashboard URL`);
       }
 
-      return data;
+      return candidates;
+    }
+
+    function renderFallbackLinks(links) {
+      const list = document.getElementById("fallback-links");
+      list.replaceChildren();
+
+      for (const data of links) {
+        const item = document.createElement("li");
+        const anchor = document.createElement("a");
+        anchor.href = data.url;
+        anchor.textContent = data.url;
+        anchor.rel = "noopener";
+        item.appendChild(anchor);
+
+        if (data.updated_at) {
+          item.appendChild(document.createTextNode(` updated ${data.updated_at}`));
+        }
+
+        list.appendChild(item);
+      }
+
+      list.hidden = links.length <= 1;
     }
 
     async function loadCurrentLink() {
       const status = document.getElementById("status");
       const message = document.getElementById("message");
       const link = document.getElementById("open-link");
+      const currentUrl = document.getElementById("current-url");
 
       try {
         const results = await Promise.allSettled(linkSources.map(fetchLinkSource));
         const links = results
           .filter((result) => result.status === "fulfilled")
-          .map((result) => result.value)
+          .flatMap((result) => result.value)
+          .filter((data, index, all) => all.findIndex((item) => item.url === data.url) === index)
           .sort((left, right) => updatedTime(right) - updatedTime(left));
 
         if (!links.length) {
@@ -125,14 +208,20 @@
         link.href = data.url;
         link.removeAttribute("aria-disabled");
         link.textContent = "Open NSW Air Quality Forecasting Dashboard";
-        message.textContent = "Redirecting to NSW Air Quality Forecasting Dashboard...";
+        message.textContent = "The current live dashboard is ready.";
+        currentUrl.hidden = false;
+        currentUrl.innerHTML = "";
+        currentUrl.appendChild(document.createTextNode("Current live link: "));
+        const currentAnchor = document.createElement("a");
+        currentAnchor.href = data.url;
+        currentAnchor.textContent = data.url;
+        currentAnchor.rel = "noopener";
+        currentUrl.appendChild(currentAnchor);
         status.textContent = `Last updated: ${data.updated_at || "unknown"}`;
-
-        window.setTimeout(() => {
-          window.location.href = data.url;
-        }, 1500);
+        renderFallbackLinks(links);
       } catch (error) {
         message.textContent = "The current dashboard link is not available yet.";
+        currentUrl.hidden = true;
         status.textContent = error.message;
       }
     }
