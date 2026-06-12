@@ -53,15 +53,6 @@
       overflow-wrap: anywhere;
     }
 
-    .status {
-      margin-top: 18px;
-      padding: 12px;
-      background: #eef2f6;
-      border-radius: 6px;
-      font-size: 14px;
-      overflow-wrap: anywhere;
-    }
-
     .current-url {
       margin: 0 0 18px;
       padding: 12px;
@@ -76,13 +67,6 @@
       color: #005eb8;
       font-weight: 700;
     }
-
-    .links {
-      margin: 16px 0 0;
-      padding-left: 20px;
-      line-height: 1.5;
-      overflow-wrap: anywhere;
-    }
   </style>
 </head>
 <body>
@@ -91,8 +75,6 @@
     <p id="message">Finding the current live dashboard...</p>
     <div id="current-url" class="current-url" hidden></div>
     <p><a id="open-link" class="button" href="#" aria-disabled="true">Open NSW Air Quality Forecasting Dashboard</a></p>
-    <div id="status" class="status">Waiting for link data.</div>
-    <ul id="fallback-links" class="links" hidden></ul>
   </main>
 
   <script>
@@ -160,30 +142,7 @@
       return candidates;
     }
 
-    function renderFallbackLinks(links) {
-      const list = document.getElementById("fallback-links");
-      list.replaceChildren();
-
-      for (const data of links) {
-        const item = document.createElement("li");
-        const anchor = document.createElement("a");
-        anchor.href = data.url;
-        anchor.textContent = data.url;
-        anchor.rel = "noopener";
-        item.appendChild(anchor);
-
-        if (data.updated_at) {
-          item.appendChild(document.createTextNode(` updated ${data.updated_at}`));
-        }
-
-        list.appendChild(item);
-      }
-
-      list.hidden = links.length <= 1;
-    }
-
     async function loadCurrentLink() {
-      const status = document.getElementById("status");
       const message = document.getElementById("message");
       const link = document.getElementById("open-link");
       const currentUrl = document.getElementById("current-url");
@@ -217,12 +176,11 @@
         currentAnchor.textContent = data.url;
         currentAnchor.rel = "noopener";
         currentUrl.appendChild(currentAnchor);
-        status.textContent = `Last updated: ${data.updated_at || "unknown"}`;
-        renderFallbackLinks(links);
       } catch (error) {
         message.textContent = "The current dashboard link is not available yet.";
         currentUrl.hidden = true;
-        status.textContent = error.message;
+        link.href = "#";
+        link.setAttribute("aria-disabled", "true");
       }
     }
 
