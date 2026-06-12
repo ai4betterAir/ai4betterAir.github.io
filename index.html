@@ -126,6 +126,24 @@
       return candidates;
     }
 
+    async function probeDashboardUrl(url, timeoutMs = 2500) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        await fetch(url, {
+          method: "GET",
+          mode: "no-cors",
+          cache: "no-store",
+          signal: controller.signal
+        });
+        return true;
+      } catch (error) {
+        return false;
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
     async function fetchLinkSource(source) {
       const separator = source.includes("?") ? "&" : "?";
       const response = await fetch(`${source}${separator}ts=${Date.now()}`, { cache: "no-store" });
@@ -163,7 +181,17 @@
           throw new Error(errors || "No valid dashboard URL is published yet.");
         }
 
-        const data = links[0];
+        let data = null;
+        for (const candidate of links) {
+          if (await probeDashboardUrl(candidate.url)) {
+            data = candidate;
+            break;
+          }
+        }
+        if (!data) {
+          data = links[0];
+        }
+
         link.href = data.url;
         link.removeAttribute("aria-disabled");
         link.textContent = "Open NSW Air Quality Forecasting Dashboard";
@@ -185,6 +213,7 @@
     }
 
     loadCurrentLink();
+    setInterval(loadCurrentLink, 30000);
   </script>
 </body>
 </html>
