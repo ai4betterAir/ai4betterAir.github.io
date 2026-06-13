@@ -159,6 +159,11 @@
       return candidates;
     }
 
+    function shouldAutoRedirect() {
+      const params = new URLSearchParams(window.location.search);
+      return !params.has("stay");
+    }
+
     async function loadCurrentLink() {
       const message = document.getElementById("message");
       const linkBox = document.getElementById("link-box");
@@ -199,6 +204,13 @@
         openLink.href = data.url;
         openLink.removeAttribute("aria-disabled");
         openLink.textContent = "Open dashboard";
+
+        if (shouldAutoRedirect()) {
+          message.textContent = "Opening the current live dashboard...";
+          setTimeout(() => {
+            window.location.replace(data.url);
+          }, 400);
+        }
       } catch (error) {
         message.textContent = "The current dashboard link is not available yet.";
         linkBox.hidden = true;
