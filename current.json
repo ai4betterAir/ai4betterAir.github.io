@@ -1,7 +1,11 @@
 {
-  "url": "https://bizrate-none-giant-howto.trycloudflare.com",
-  "updated_at": "2026-06-30T18:10:54+10:00",
+  "url": "https://pages-chrome-exemption-visitor.trycloudflare.com",
+  "updated_at": "2026-06-30T18:11:19+10:00",
   "urls": [
+    {
+      "url": "https://pages-chrome-exemption-visitor.trycloudflare.com",
+      "updated_at": "2026-06-30T18:11:19+10:00"
+    },
     {
       "url": "https://bizrate-none-giant-howto.trycloudflare.com",
       "updated_at": "2026-06-30T18:10:54+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://rico-effective-van-breathing.trycloudflare.com",
       "updated_at": "2026-06-30T17:39:50+10:00"
-    },
-    {
-      "url": "https://doom-bald-scsi-missions.trycloudflare.com",
-      "updated_at": "2026-06-30T17:09:44+10:00"
     }
   ]
 }
