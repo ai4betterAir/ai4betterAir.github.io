@@ -188,8 +188,21 @@
             break;
           }
         }
+
         if (!data) {
-          data = links[0];
+          const latest = links[0];
+          openLink.href = latest.url;
+          openLink.removeAttribute("aria-disabled");
+          openLink.textContent = "Open latest published link";
+          message.textContent = "No live dashboard tunnel is reachable right now. The latest published link is shown below, but it may be stale.";
+          linkBox.hidden = false;
+          linkBox.innerHTML = "";
+          const anchor = document.createElement("a");
+          anchor.href = latest.url;
+          anchor.textContent = latest.url;
+          anchor.rel = "noopener";
+          linkBox.appendChild(anchor);
+          return;
         }
 
         message.textContent = "Current live NSW Air Quality Nowcasting Dashboard:";
