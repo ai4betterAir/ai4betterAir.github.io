@@ -193,8 +193,22 @@
             break;
           }
         }
+
         if (!data) {
-          data = links[0];
+          const latest = links[0];
+          link.href = latest.url;
+          link.removeAttribute("aria-disabled");
+          link.textContent = "Open latest published link";
+          message.textContent = "No live dashboard tunnel is reachable right now. The latest published link is shown below, but it may be stale.";
+          currentUrl.hidden = false;
+          currentUrl.innerHTML = "";
+          currentUrl.appendChild(document.createTextNode("Latest published link: "));
+          const currentAnchor = document.createElement("a");
+          currentAnchor.href = latest.url;
+          currentAnchor.textContent = latest.url;
+          currentAnchor.rel = "noopener";
+          currentUrl.appendChild(currentAnchor);
+          return;
         }
 
         link.href = data.url;
