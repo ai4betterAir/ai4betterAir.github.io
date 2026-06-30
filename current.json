@@ -1,7 +1,11 @@
 {
-  "url": "https://verification-cradle-expanded-apt.trycloudflare.com",
-  "updated_at": "2026-06-30T21:15:19+10:00",
+  "url": "https://banner-beats-americas-thing.trycloudflare.com",
+  "updated_at": "2026-06-30T21:45:57+10:00",
   "urls": [
+    {
+      "url": "https://banner-beats-americas-thing.trycloudflare.com",
+      "updated_at": "2026-06-30T21:45:57+10:00"
+    },
     {
       "url": "https://verification-cradle-expanded-apt.trycloudflare.com",
       "updated_at": "2026-06-30T21:15:19+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://dan-suppose-andy-dock.trycloudflare.com",
       "updated_at": "2026-06-30T20:43:53+10:00"
-    },
-    {
-      "url": "https://mon-entity-thru-arabic.trycloudflare.com",
-      "updated_at": "2026-06-30T20:43:21+10:00"
     }
   ]
 }
