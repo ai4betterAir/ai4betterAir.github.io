@@ -85,7 +85,10 @@
     function isValidDashboardUrl(url) {
       try {
         const parsed = new URL(url);
-        return parsed.protocol === "https:" && parsed.hostname.endsWith(".lhr.life");
+        return parsed.protocol === "https:" && (
+          parsed.hostname.endsWith(".lhr.life") ||
+          parsed.hostname.endsWith(".trycloudflare.com")
+        );
       } catch (error) {
         return false;
       }
