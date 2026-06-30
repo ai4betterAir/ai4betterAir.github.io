@@ -1,7 +1,11 @@
 {
-  "url": "https://rap-bit-relay-publish.trycloudflare.com",
-  "updated_at": "2026-06-30T23:47:13+10:00",
+  "url": "https://extraordinary-smart-base-gibson.trycloudflare.com",
+  "updated_at": "2026-07-01T00:17:23+10:00",
   "urls": [
+    {
+      "url": "https://extraordinary-smart-base-gibson.trycloudflare.com",
+      "updated_at": "2026-07-01T00:17:23+10:00"
+    },
     {
       "url": "https://rap-bit-relay-publish.trycloudflare.com",
       "updated_at": "2026-06-30T23:47:13+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://wires-est-invalid-implementation.trycloudflare.com",
       "updated_at": "2026-06-30T22:16:27+10:00"
-    },
-    {
-      "url": "https://banner-beats-americas-thing.trycloudflare.com",
-      "updated_at": "2026-06-30T21:45:59+10:00"
     }
   ]
 }
