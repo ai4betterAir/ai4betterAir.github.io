@@ -1,7 +1,11 @@
 {
-  "url": "https://liability-wireless-digit-funk.trycloudflare.com",
-  "updated_at": "2026-07-01T14:20:02+10:00",
+  "url": "https://readings-missile-moscow-nav.trycloudflare.com",
+  "updated_at": "2026-07-01T14:50:15+10:00",
   "urls": [
+    {
+      "url": "https://readings-missile-moscow-nav.trycloudflare.com",
+      "updated_at": "2026-07-01T14:50:15+10:00"
+    },
     {
       "url": "https://liability-wireless-digit-funk.trycloudflare.com",
       "updated_at": "2026-07-01T14:20:02+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://julian-halo-electron-applies.trycloudflare.com",
       "updated_at": "2026-07-01T12:56:40+10:00"
-    },
-    {
-      "url": "https://corners-reward-bases-ride.trycloudflare.com",
-      "updated_at": "2026-07-01T12:26:25+10:00"
     }
   ]
 }
