@@ -1,7 +1,11 @@
 {
-  "url": "https://lions-opinion-climate-value.trycloudflare.com",
-  "updated_at": "2026-07-05T03:54:16+10:00",
+  "url": "https://releases-voluntary-receipt-laser.trycloudflare.com",
+  "updated_at": "2026-07-05T04:24:20+10:00",
   "urls": [
+    {
+      "url": "https://releases-voluntary-receipt-laser.trycloudflare.com",
+      "updated_at": "2026-07-05T04:24:20+10:00"
+    },
     {
       "url": "https://lions-opinion-climate-value.trycloudflare.com",
       "updated_at": "2026-07-05T03:54:16+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://transaction-acknowledged-admissions-forests.trycloudflare.com",
       "updated_at": "2026-07-05T02:23:22+10:00"
-    },
-    {
-      "url": "https://seeker-pierce-lap-pick.trycloudflare.com",
-      "updated_at": "2026-07-05T01:52:59+10:00"
     }
   ]
 }
