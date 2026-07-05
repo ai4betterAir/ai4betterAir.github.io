@@ -1,7 +1,11 @@
 {
-  "url": "https://bidder-board-desktop-whereas.trycloudflare.com",
-  "updated_at": "2026-07-05T17:41:31+10:00",
+  "url": "https://interactions-fiction-stuart-assessments.trycloudflare.com",
+  "updated_at": "2026-07-05T18:06:42+10:00",
   "urls": [
+    {
+      "url": "https://interactions-fiction-stuart-assessments.trycloudflare.com",
+      "updated_at": "2026-07-05T18:06:42+10:00"
+    },
     {
       "url": "https://bidder-board-desktop-whereas.trycloudflare.com",
       "updated_at": "2026-07-05T17:41:31+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://improvements-ensemble-lecture-cst.trycloudflare.com",
       "updated_at": "2026-07-05T16:35:42+10:00"
-    },
-    {
-      "url": "https://required-languages-committee-incentives.trycloudflare.com",
-      "updated_at": "2026-07-05T16:05:26+10:00"
     }
   ]
 }
