@@ -1,7 +1,11 @@
 {
-  "url": "https://lisa-distinct-simulations-cet.trycloudflare.com",
-  "updated_at": "2026-07-06T02:43:35+10:00",
+  "url": "https://suffering-democracy-nuclear-alliance.trycloudflare.com",
+  "updated_at": "2026-07-06T03:13:50+10:00",
   "urls": [
+    {
+      "url": "https://suffering-democracy-nuclear-alliance.trycloudflare.com",
+      "updated_at": "2026-07-06T03:13:50+10:00"
+    },
     {
       "url": "https://lisa-distinct-simulations-cet.trycloudflare.com",
       "updated_at": "2026-07-06T02:43:35+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://trips-heating-finances-aqua.trycloudflare.com",
       "updated_at": "2026-07-06T01:42:44+10:00"
-    },
-    {
-      "url": "https://hawk-walker-pmid-anthropology.trycloudflare.com",
-      "updated_at": "2026-07-06T01:17:35+10:00"
     }
   ]
 }
