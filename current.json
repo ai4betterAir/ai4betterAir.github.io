@@ -1,7 +1,11 @@
 {
-  "url": "https://faq-lamp-reasoning-pierre.trycloudflare.com",
-  "updated_at": "2026-07-06T14:29:27+10:00",
+  "url": "https://beats-massive-weekly-sip.trycloudflare.com",
+  "updated_at": "2026-07-06T15:00:29+10:00",
   "urls": [
+    {
+      "url": "https://beats-massive-weekly-sip.trycloudflare.com",
+      "updated_at": "2026-07-06T15:00:29+10:00"
+    },
     {
       "url": "https://faq-lamp-reasoning-pierre.trycloudflare.com",
       "updated_at": "2026-07-06T14:29:27+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://documented-invoice-campbell-ted.trycloudflare.com",
       "updated_at": "2026-07-06T12:57:01+10:00"
-    },
-    {
-      "url": "https://eddie-repeated-fighters-roads.trycloudflare.com",
-      "updated_at": "2026-07-06T12:25:47+10:00"
     }
   ]
 }
