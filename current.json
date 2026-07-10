@@ -1,7 +1,11 @@
 {
-  "url": "https://cal-flat-creates-fraction.trycloudflare.com",
-  "updated_at": "2026-07-10T22:18:29+10:00",
+  "url": "https://graduation-list-golden-elect.trycloudflare.com",
+  "updated_at": "2026-07-10T22:48:33+10:00",
   "urls": [
+    {
+      "url": "https://graduation-list-golden-elect.trycloudflare.com",
+      "updated_at": "2026-07-10T22:48:33+10:00"
+    },
     {
       "url": "https://cal-flat-creates-fraction.trycloudflare.com",
       "updated_at": "2026-07-10T22:18:29+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://signal-joshua-awards-breeds.trycloudflare.com",
       "updated_at": "2026-07-10T20:47:47+10:00"
-    },
-    {
-      "url": "https://sugar-soonest-fair-dsc.trycloudflare.com",
-      "updated_at": "2026-07-10T20:17:20+10:00"
     }
   ]
 }
