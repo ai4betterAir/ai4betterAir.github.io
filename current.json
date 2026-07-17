@@ -1,7 +1,11 @@
 {
-  "url": "https://oregon-est-volt-carey.trycloudflare.com",
-  "updated_at": "2026-07-18T09:42:11+10:00",
+  "url": "https://catalyst-bike-inns-compliant.trycloudflare.com",
+  "updated_at": "2026-07-18T09:42:22+10:00",
   "urls": [
+    {
+      "url": "https://catalyst-bike-inns-compliant.trycloudflare.com",
+      "updated_at": "2026-07-18T09:42:22+10:00"
+    },
     {
       "url": "https://oregon-est-volt-carey.trycloudflare.com",
       "updated_at": "2026-07-18T09:42:11+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://handheld-applications-joy-intelligent.trycloudflare.com",
       "updated_at": "2026-07-18T08:41:34+10:00"
-    },
-    {
-      "url": "https://edited-strict-fragrance-wifi.trycloudflare.com",
-      "updated_at": "2026-07-18T08:11:06+10:00"
     }
   ]
 }
