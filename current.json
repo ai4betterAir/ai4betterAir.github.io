@@ -1,7 +1,11 @@
 {
-  "url": "https://rim-kirk-confirmed-outsourcing.trycloudflare.com",
-  "updated_at": "2026-07-19T10:28:17+10:00",
+  "url": "https://deployment-lucy-bedford-find.trycloudflare.com",
+  "updated_at": "2026-07-19T10:28:36+10:00",
   "urls": [
+    {
+      "url": "https://deployment-lucy-bedford-find.trycloudflare.com",
+      "updated_at": "2026-07-19T10:28:36+10:00"
+    },
     {
       "url": "https://rim-kirk-confirmed-outsourcing.trycloudflare.com",
       "updated_at": "2026-07-19T10:28:17+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://triumph-spell-pos-sciences.trycloudflare.com",
       "updated_at": "2026-07-19T09:27:31+10:00"
-    },
-    {
-      "url": "https://jewel-sleeve-regarded-gorgeous.trycloudflare.com",
-      "updated_at": "2026-07-19T08:57:21+10:00"
     }
   ]
 }
