@@ -1,7 +1,11 @@
 {
-  "url": "https://trader-thirty-conviction-ask.trycloudflare.com",
-  "updated_at": "2026-07-20T02:41:38+10:00",
+  "url": "https://mlb-flights-submitted-adjustable.trycloudflare.com",
+  "updated_at": "2026-07-20T03:11:40+10:00",
   "urls": [
+    {
+      "url": "https://mlb-flights-submitted-adjustable.trycloudflare.com",
+      "updated_at": "2026-07-20T03:11:40+10:00"
+    },
     {
       "url": "https://trader-thirty-conviction-ask.trycloudflare.com",
       "updated_at": "2026-07-20T02:41:38+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://serious-pilot-opportunity-rapid.trycloudflare.com",
       "updated_at": "2026-07-20T01:40:40+10:00"
-    },
-    {
-      "url": "https://cattle-focal-mark-usage.trycloudflare.com",
-      "updated_at": "2026-07-20T01:40:11+10:00"
     }
   ]
 }
