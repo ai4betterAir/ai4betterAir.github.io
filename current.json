@@ -1,7 +1,11 @@
 {
-  "url": "https://mlb-flights-submitted-adjustable.trycloudflare.com",
-  "updated_at": "2026-07-20T03:11:50+10:00",
+  "url": "https://friend-fly-demonstration-inns.trycloudflare.com",
+  "updated_at": "2026-07-20T03:41:49+10:00",
   "urls": [
+    {
+      "url": "https://friend-fly-demonstration-inns.trycloudflare.com",
+      "updated_at": "2026-07-20T03:41:49+10:00"
+    },
     {
       "url": "https://mlb-flights-submitted-adjustable.trycloudflare.com",
       "updated_at": "2026-07-20T03:11:50+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://build-nuclear-candles-philadelphia.trycloudflare.com",
       "updated_at": "2026-07-20T01:41:01+10:00"
-    },
-    {
-      "url": "https://serious-pilot-opportunity-rapid.trycloudflare.com",
-      "updated_at": "2026-07-20T01:40:40+10:00"
     }
   ]
 }
