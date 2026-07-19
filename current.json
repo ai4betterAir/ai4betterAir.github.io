@@ -1,7 +1,11 @@
 {
-  "url": "https://ears-destinations-wizard-seeker.trycloudflare.com",
-  "updated_at": "2026-07-19T23:38:09+10:00",
+  "url": "https://lights-gps-gui-tours.trycloudflare.com",
+  "updated_at": "2026-07-20T00:08:08+10:00",
   "urls": [
+    {
+      "url": "https://lights-gps-gui-tours.trycloudflare.com",
+      "updated_at": "2026-07-20T00:08:08+10:00"
+    },
     {
       "url": "https://ears-destinations-wizard-seeker.trycloudflare.com",
       "updated_at": "2026-07-19T23:38:09+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://celebration-reliability-individually-joseph.trycloudflare.com",
       "updated_at": "2026-07-19T22:37:24+10:00"
-    },
-    {
-      "url": "https://digital-noticed-html-resulted.trycloudflare.com",
-      "updated_at": "2026-07-19T22:07:02+10:00"
     }
   ]
 }
