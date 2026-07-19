@@ -1,7 +1,11 @@
 {
-  "url": "https://serves-patients-contacting-productivity.trycloudflare.com",
-  "updated_at": "2026-07-19T17:03:34+10:00",
+  "url": "https://jul-telescope-annual-booking.trycloudflare.com",
+  "updated_at": "2026-07-19T17:33:44+10:00",
   "urls": [
+    {
+      "url": "https://jul-telescope-annual-booking.trycloudflare.com",
+      "updated_at": "2026-07-19T17:33:44+10:00"
+    },
     {
       "url": "https://serves-patients-contacting-productivity.trycloudflare.com",
       "updated_at": "2026-07-19T17:03:34+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://patent-sections-academic-shortcuts.trycloudflare.com",
       "updated_at": "2026-07-19T16:03:01+10:00"
-    },
-    {
-      "url": "https://expectations-northwest-keep-created.trycloudflare.com",
-      "updated_at": "2026-07-19T15:32:49+10:00"
     }
   ]
 }
