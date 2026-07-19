@@ -1,7 +1,11 @@
 {
-  "url": "https://elder-nam-note-adelaide.trycloudflare.com",
-  "updated_at": "2026-07-19T11:29:13+10:00",
+  "url": "https://fusion-banners-labs-vermont.trycloudflare.com",
+  "updated_at": "2026-07-19T11:29:31+10:00",
   "urls": [
+    {
+      "url": "https://fusion-banners-labs-vermont.trycloudflare.com",
+      "updated_at": "2026-07-19T11:29:31+10:00"
+    },
     {
       "url": "https://elder-nam-note-adelaide.trycloudflare.com",
       "updated_at": "2026-07-19T11:29:13+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://deployment-lucy-bedford-find.trycloudflare.com",
       "updated_at": "2026-07-19T10:28:36+10:00"
-    },
-    {
-      "url": "https://rim-kirk-confirmed-outsourcing.trycloudflare.com",
-      "updated_at": "2026-07-19T10:28:17+10:00"
     }
   ]
 }
