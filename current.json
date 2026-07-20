@@ -1,7 +1,11 @@
 {
-  "url": "https://passengers-overview-vanilla-routine.trycloudflare.com",
-  "updated_at": "2026-07-20T22:59:23+10:00",
+  "url": "https://max-stops-decorating-adventure.trycloudflare.com",
+  "updated_at": "2026-07-20T22:59:39+10:00",
   "urls": [
+    {
+      "url": "https://max-stops-decorating-adventure.trycloudflare.com",
+      "updated_at": "2026-07-20T22:59:39+10:00"
+    },
     {
       "url": "https://passengers-overview-vanilla-routine.trycloudflare.com",
       "updated_at": "2026-07-20T22:59:23+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://herb-proprietary-alphabetical-shipment.trycloudflare.com",
       "updated_at": "2026-07-20T21:28:43+10:00"
-    },
-    {
-      "url": "https://therapy-buddy-specialized-paradise.trycloudflare.com",
-      "updated_at": "2026-07-20T21:28:22+10:00"
     }
   ]
 }
