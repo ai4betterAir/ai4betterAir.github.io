@@ -1,7 +1,11 @@
 {
-  "url": "https://nebraska-backed-model-sing.trycloudflare.com",
-  "updated_at": "2026-07-22T03:07:47+10:00",
+  "url": "https://parcel-suse-adaptive-deutschland.trycloudflare.com",
+  "updated_at": "2026-07-22T03:37:53+10:00",
   "urls": [
+    {
+      "url": "https://parcel-suse-adaptive-deutschland.trycloudflare.com",
+      "updated_at": "2026-07-22T03:37:53+10:00"
+    },
     {
       "url": "https://nebraska-backed-model-sing.trycloudflare.com",
       "updated_at": "2026-07-22T03:07:47+10:00"
@@ -17,10 +21,6 @@
     {
       "url": "https://renew-twenty-matrix-anderson.trycloudflare.com",
       "updated_at": "2026-07-22T02:06:48+10:00"
-    },
-    {
-      "url": "https://commerce-framework-exemption-fda.trycloudflare.com",
-      "updated_at": "2026-07-22T02:05:58+10:00"
     }
   ]
 }
