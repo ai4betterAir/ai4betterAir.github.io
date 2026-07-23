@@ -85,10 +85,9 @@
     function isValidDashboardUrl(url) {
       try {
         const parsed = new URL(url);
-        return parsed.protocol === "https:" && (
-          parsed.hostname.endsWith(".lhr.life") ||
-          parsed.hostname.endsWith(".trycloudflare.com")
-        );
+        const isLocalhostRun = parsed.hostname.endsWith(".lhr.life");
+        const isQuickCloudflare = /^[a-z0-9]+(?:-[a-z0-9]+){2,}[.]trycloudflare[.]com$/.test(parsed.hostname);
+        return parsed.protocol === "https:" && (isLocalhostRun || isQuickCloudflare);
       } catch (error) {
         return false;
       }
